@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FadeFragment">
+
+
+    <TextView
+        android:id="@+id/currentIpAdress2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="0.0.0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="offline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/updatebtn2"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/status2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/currentlyonTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="on/off: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/currentIpAdress2" />
+
+    <TextView
+        android:id="@+id/constantTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="constant/nonconstant: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/currentlyonTextView2" />
+
+    <TextView
+        android:id="@+id/brightnessTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="brightness: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/constantTextView2" />
+
+    <TextView
+        android:id="@+id/redTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="phaseshift red: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/brightnessTextView2" />
+
+    <TextView
+        android:id="@+id/greenTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="phaseshift green: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/redTextView2" />
+
+    <TextView
+        android:id="@+id/blueTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="phaseshift blue: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/greenTextView2" />
+
+
+    <TextView
+        android:id="@+id/cycleDurationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="cycle duration: "
+        app:layout_constraintStart_toStartOf="@+id/currentIpAdress2"
+        app:layout_constraintTop_toBottomOf="@+id/blueTextView2" />
+
+    <Switch
+        android:id="@+id/onoffswitch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="OFF "
+        android:textColor="#808080"
+        app:layout_constraintStart_toStartOf="@+id/cycleDurationTextView"
+        app:layout_constraintTop_toBottomOf="@+id/cycleDurationTextView" />
+
+    <TextView
+        android:layout_width="26dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="2dp"
+        android:gravity="center_vertical"
+        android:text="ON"
+        android:textColor="#808080"
+        app:layout_constraintStart_toEndOf="@+id/onoffswitch2"
+        app:layout_constraintTop_toTopOf="@+id/onoffswitch2" />
+
+    <SeekBar
+        android:id="@+id/seekBarBrightness2"
+        android:layout_width="280dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onoffswitch2" />
+
+
+    <TextView
+        android:id="@+id/brightnessValueTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" brightness"
+        app:layout_constraintStart_toEndOf="@+id/seekBarBrightness2"
+        app:layout_constraintTop_toTopOf="@+id/seekBarBrightness2" />
+
+    <SeekBar
+        android:id="@+id/seekBarRed"
+        android:layout_width="220dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCycleduration" />
+
+    <TextView
+        android:id="@+id/redValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" phsh red:"
+        app:layout_constraintStart_toEndOf="@+id/seekBarRed"
+        app:layout_constraintTop_toTopOf="@+id/seekBarRed" />
+
+    <SeekBar
+        android:id="@+id/seekBarGreen"
+        android:layout_width="220dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarRed" />
+
+    <TextView
+        android:id="@+id/greenValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" phsh green:"
+        app:layout_constraintStart_toEndOf="@+id/seekBarGreen"
+        app:layout_constraintTop_toTopOf="@+id/seekBarGreen" />
+    <SeekBar
+        android:id="@+id/seekBarBlue"
+        android:layout_width="220dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarGreen" />
+
+    <TextView
+        android:id="@+id/blueValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" phsh blue:"
+        app:layout_constraintStart_toEndOf="@+id/seekBarBlue"
+        app:layout_constraintTop_toTopOf="@+id/seekBarBlue" />
+
+
+    <Button
+        android:id="@+id/setnonconstantbutton"
+        android:layout_width="177dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:text="Set nonconstant"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/onoffswitch2"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarBrightness2" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCycleduration"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="@+id/setnonconstantbutton"
+        app:layout_constraintTop_toBottomOf="@+id/setnonconstantbutton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="cycle duration (ms)"
+        app:layout_constraintStart_toEndOf="@+id/editTextCycleduration"
+        app:layout_constraintTop_toTopOf="@+id/editTextCycleduration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
